@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" >
+	<title>Products Details Ebuy</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+</head>
+<body>
+
+<div class="container">
+	<div class="navbar">
+	<div class="logo">
+		<a href="index.html"><img src="images/logo.png" width="150px"></a>
+	</div>
+
+	<nav>
+		<ul id="Menuitems">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="product.html">Product</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="Account.html">Account</a></li>
+		</ul>
+	</nav>
+	<a href="Add to cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+	<img src="images/menu.png" class="menu_icon" onclick="menutoggle()">
+</div>
+</div>
+
+
+
+  <div class="containerr">
+  <form action="action_page.php">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+
+
+
+
+
+
+<!---footer---->
+
+<div class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="footer-column1">
+				<h3>Download Our App</h3>
+				<p> Download App for Android and ios mobile phone</p>
+				<div class="app-logo">
+					<img src="images/play-store.png">
+					<img src="images/app-store.png">
+				</div>
+			</div>
+			<div class="footer-column2">
+			<img src="images/logo1.png">
+				<p> Our Purpose IS TO Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many</p>
+			</div>
+			<div class="footer-column3">
+				<h3>Useful Link</h3>
+				<ul>
+					<li>Cupons</li>
+					<li>Blog Post</li>
+					<li>Return Policy</li>
+					<li>Join Affiliate</li>
+				</ul>
+			</div>
+			<div class="footer-column4">
+				<h3>Follow</h3>
+				<ul>
+					<li>Facebook</li>
+					<li>Twitter</li>
+					<li>Instagram</li>
+					<li>youtube</li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+		<p class="Copyright"> Copyright 2021 - Ebuy ecommerce website @akash</p>
+	</div>
+</div>
+
+<!---js for toggole menu-->
+
+<script type="text/javascript">
+	var Menuitems = document.getElementById("Menuitems");
+	document.getElementById("Menuitems").style.maxHeight = "0px";
+	function menutoggle(){
+		if(document.getElementById("Menuitems").style.maxHeight === "0px"){
+			document.getElementById("Menuitems").style.maxHeight = "200px"
+		}else{
+			document.getElementById("Menuitems").style.maxHeight = "0px"
+		}
+	}
+
+</script>
+
+
+<!--js for products galary-->
+
+<script type="text/javascript">
+	
+var ProductImg = document.getElementById("ProductImg");
+var SmallImg =document.getElementByClassName('SmallImg');
+
+SmallImg[0].onclick=function()
+{
+	ProductImg.src= SmallImg[0].src;
+}
+SmallImg[1].onclick=function()
+{
+	ProductImg.src= SmallImg[1].src;
+}
+SmallImg[2].onclick=function()
+{
+	ProductImg.src= SmallImg[2].src;
+}
+SmallImg[3].onclick=function()
+{
+	ProductImg.src= SmallImg[3].src;
+}
+
+</script>
+
+</body>
+</html>

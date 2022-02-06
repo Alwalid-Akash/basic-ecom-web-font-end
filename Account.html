@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" >
+	<title>Products Details Ebuy</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+</head>
+<body>
+
+<div class="container">
+	
+	<div class="navbar">
+	<div class="logo">
+		<a href="index.html"><img src="images/logo.png" width="150px"></a>
+	</div>
+
+	<nav>
+		<ul id="Menuitems">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="product.html">Product</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="Account.html">Account</a></li>
+		</ul>
+	</nav>
+	<a href="Add to cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+	<img src="images/menu.png" class="menu_icon" onclick="menutoggle()">
+</div>
+</div>
+
+ <!---acc page-->
+<div class=" account-page">
+<div class="container">
+	<div class="row">
+		<div class="column-2">
+			<img src="images/image1.png" width="100%">
+		</div>
+		<div class="column-2">
+		 <div class="from-container">
+		 <div class="from-btn">
+		 	<span onclick="login()"> Login</span>
+		 	<span onclick="register()">Registration</span>
+		 	<hr id="indicator">
+		 </div>
+			<form id="Loginfrom">
+				<input type="text" placeholder="Username">
+				<input type="password" placeholder="password">
+				<button type="submit" class="btn"> Login</button>
+				<a href="">Forgot password</a>
+			</form>
+            
+            <form id="Regfrom">
+				<input type="text" placeholder="Username">
+				<input type="email" placeholder="Email">
+				<input type="password" placeholder="password">
+				<button type="submit" class="btn"> Register</button>
+
+			</form>
+
+		</div>
+			
+		</div>
+	</div>
+</div>
+</div>
+
+
+<!---footer---->
+<div class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="footer-column1">
+				<h3>Download Our App</h3>
+				<p> Download App for Android and ios mobile phone</p>
+				<div class="app-logo">
+					<img src="images/play-store.png">
+					<img src="images/app-store.png">
+				</div>
+			</div>
+			<div class="footer-column2">
+			<img src="images/logo1.png">
+				<p> Our Purpose IS TO Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many</p>
+			</div>
+			<div class="footer-column3">
+				<h3>Useful Link</h3>
+				<ul>
+					<li>Cupons</li>
+					<li>Blog Post</li>
+					<li>Return Policy</li>
+					<li>Join Affiliate</li>
+				</ul>
+			</div>
+			<div class="footer-column4">
+				<h3>Follow</h3>
+				<ul>
+					<li>Facebook</li>
+					<li>Twitter</li>
+					<li>Instagram</li>
+					<li>youtube</li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+		<p class="Copyright"> Copyright 2021 - Ebuy ecommerce website @akash</p>
+	</div>
+</div>
+ 
+<!---js for toggole menu-->
+
+<script type="text/javascript">
+	var Menuitems = document.getElementById("Menuitems");
+	document.getElementById("Menuitems").style.maxHeight = "0px";
+	function menutoggle(){
+		if(document.getElementById("Menuitems").style.maxHeight === "0px"){
+			document.getElementById("Menuitems").style.maxHeight = "200px"
+		}else{
+			document.getElementById("Menuitems").style.maxHeight = "0px"
+		}
+	}
+
+</script>
+
+<!---js for toggole from-->
+
+<script type="text/javascript">
+	
+ var Loginfrom = document.getElementById('Loginfrom');
+ var Regfrom = document.getElementById('Regfrom');
+ var Indicator = document.getElementsByid('Indicator');
+
+ function register(){
+ 	Regfrom.style.transform = "translateX(0px)";
+ 	Loginfrom.style.transform = "translateX(0px)";
+    Indicator.style.transform = "translateX(100px)"
+
+ }
+
+function login(){
+ 	Regfrom.style.transform = "translateX(300px)";
+ 	Loginfrom.style.transform = "translateX(300px)";
+ 	 Indicator.style.transform = "translateX(0px)"
+
+ }
+
+</script>
+
+</body>
+</html>
